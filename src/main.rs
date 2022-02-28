@@ -4,7 +4,7 @@ use poise::{
     serenity_prelude::GatewayIntents, Framework, FrameworkOptions, PrefixFrameworkOptions,
 };
 
-use crate::commands::owner;
+use crate::commands::{moderation, owner};
 
 mod commands;
 mod config;
@@ -24,7 +24,7 @@ async fn main() {
                 prefix: Some(prefix),
                 ..Default::default()
             },
-            commands: vec![owner::register_commands()],
+            commands: vec![owner::register_commands(), moderation::prune()],
             ..Default::default()
         })
         .client_settings(|s| s.intents(GatewayIntents::all()))

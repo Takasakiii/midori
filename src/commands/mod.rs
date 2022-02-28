@@ -1,6 +1,7 @@
-use crate::config::Config;
-
+pub mod moderation;
 pub mod owner;
+
+use crate::config::Config;
 
 pub struct Data {
     pub config: Config,

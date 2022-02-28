@@ -542,6 +542,7 @@ dependencies = [
  "figment",
  "poise",
  "serde",
+ "serde_json",
  "tokio",
 ]
 
