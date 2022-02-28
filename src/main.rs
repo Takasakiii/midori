@@ -1,3 +1,7 @@
+mod commands;
+mod config;
+mod extensions;
+
 use commands::Data;
 use config::Config;
 use poise::{
@@ -5,9 +9,6 @@ use poise::{
 };
 
 use crate::commands::{moderation, owner};
-
-mod commands;
-mod config;
 
 #[tokio::main]
 async fn main() {
